@@ -1,0 +1,43 @@
+.red {
+  color: red;
+}
+
+.food {
+  margin: 20px auto;
+  width: 200px;
+  background-color: #ccc;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.food h4 {
+  text-align: center;
+  color: blue;
+  font-size: 20px;
+  margin: 0;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.food-img {
+  width: 100%;
+  height: auto;
+}
+
+.cart-item {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid grey;
+  line-height: 0px;
+} 

@@ -1,0 +1,10 @@
+[00:37:07.281] Server  ERROR   Error: ENOENT: no such file or directory, scandir '/Users/hyeonjun/Desktop/study/nextjs-study/next-study/app'
+[00:37:07.284] Server  ERROR   ⨯ "unhandledRejection:" Error: ENOENT: no such file or directory, scandir '/Users/hyeonjun/Desktop/study/nextjs-study/next-study/app'
+[00:37:07.288] Server  ERROR   ⨯ "unhandledRejection: " Error: ENOENT: no such file or directory, scandir '/Users/hyeonjun/Desktop/study/nextjs-study/next-study/app'
+[00:37:07.295] Server  ERROR   Error: ENOENT: no such file or directory, scandir '/Users/hyeonjun/Desktop/study/nextjs-study/next-study/app'
+[00:37:07.297] Server  ERROR   Error: ENOENT: no such file or directory, scandir '/Users/hyeonjun/Desktop/study/nextjs-study/next-study/app'
+[00:37:07.314] Server  ERROR   Error: ENOENT: no such file or directory, scandir '/Users/hyeonjun/Desktop/study/nextjs-study/next-study/app'
+[00:37:07.316] Server  ERROR   Error: ENOENT: no such file or directory, scandir '/Users/hyeonjun/Desktop/study/nextjs-study/next-study/app'
+[00:37:07.318] Server  ERROR   Error: ENOENT: no such file or directory, scandir '/Users/hyeonjun/Desktop/study/nextjs-study/next-study/app'
+[00:37:07.319] Server  ERROR   Error: ENOENT: no such file or directory, scandir '/Users/hyeonjun/Desktop/study/nextjs-study/next-study/app'
+[00:37:07.356] Server  LOG     ✓ Compiled in 55ms
