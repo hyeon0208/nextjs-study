@@ -26,7 +26,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const product = await getProduct(id);
 
     return {
-        title: product.title,
+        alternates: {
+            canonical: `/product/${id}`, // 앞에 도메인을 안 붙여도 됨
+        },
+        openGraph: {
+            url: `/product/${id}`,      // 알아서 https://mysite.com/product/1 로 변환됨
+            images: "/thumbnail.png", // 알아서 https://mysite.com/thumbnail.png 로 변환됨
+        },
+        title: `${product.title} 최저가 구매하기`,
         description: product.description,
     };
 }
