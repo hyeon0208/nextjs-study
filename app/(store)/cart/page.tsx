@@ -5,7 +5,9 @@
 
 import data from './data'
 
-export default function Cart() {
+export default async function Cart() {
+    await new Promise((resolve) => setTimeout(resolve, 5000));
+
     return (
         <div>
             <h4 className="title">Cart</h4>
@@ -22,6 +24,7 @@ export default function Cart() {
 
 // 아래 처럼 재사용하는걸 컴포넌트 문법이라고 함.
 function CartItem() {
+
     return (
         <div className="cart-item">
             <p>상품명: {data.name}</p>
