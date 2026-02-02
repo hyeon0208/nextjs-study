@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
@@ -63,8 +63,6 @@ export const metadata: Metadata = {
     description: "나만의 기록, 최강블로그",
     images: ["/og-image.png"],
   },
-  viewport: "width=device-width, initial-scale=1", // 기기 화면 크기에 맞춰 사이트를 어떻게 보여줄지 결정 (현재는 화면 너비를 기기 너비에 맞추고, 처음에 100% 크기)
-  themeColor: "#ffffff", // 모바일 브라우저(크롬, 사파리 등)의 상단 주소창 배경색을 내 사이트 색상으로 바꿈
   verification: { // 내가 이 사이트의 진짜 주인이라는 인증
     // 서치 콘솔에서 실제 발급받은 코드를 넣어야함
     google: "google-site-verification-code",
@@ -72,6 +70,12 @@ export const metadata: Metadata = {
       "naver-site-verification": ["naver-site-verification-code"],
     },
   },
+};
+
+export const viewport: Viewport = { // 기기 화면 크기에 맞춰 사이트를 어떻게 보여줄지 결정 (현재는 화면 너비를 기기 너비에 맞추고, 처음에 100% 크기)
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({
