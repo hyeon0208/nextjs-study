@@ -18,15 +18,21 @@ export default async function Cart() {
             <h4 className="title">Cart</h4>
             {cartData.map((item, index) => {
                 return (
-                    <CartItem
-                        name={item[0]}  // 배열의 첫 번째 값 (상품명)
-                        price={item[1]} // 배열의 두 번째 값 (가격)
-                        key={index}
-                    />
+                    <div key={index}>
+                        <CartItem
+                            name={item[0]}  // 배열의 첫 번째 값 (상품명)
+                            price={item[1]} // 배열의 두 번째 값 (가격)
+                        />
+                        <Btn color="blue" />
+                    </div>
                 )
             })}
         </div>
     )
+}
+
+function Btn(props: { color: string }) {
+    return <button style={{ background: props.color }}>버튼임</button>
 }
 
 // 아래 처럼 재사용하는걸 컴포넌트 문법이라고 함.
