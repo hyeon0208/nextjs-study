@@ -8,27 +8,34 @@ import data from './data'
 export default async function Cart() {
     await new Promise((resolve) => setTimeout(resolve, 5000));
 
+    const cartData: [string, number][] = [
+        ['Tomatoes', 40],
+        ['Pasta', 25],
+        ['Coconut', 15]
+    ];
     return (
         <div>
             <h4 className="title">Cart</h4>
-            <CartItem />
-            <CartItem />
-            <CartItem />
-            <CartItem />
-            <CartItem />
-            <CartItem />
-            <CartItem />
+            {cartData.map((item, index) => {
+                return (
+                    <CartItem
+                        name={item[0]}  // 배열의 첫 번째 값 (상품명)
+                        price={item[1]} // 배열의 두 번째 값 (가격)
+                        key={index}
+                    />
+                )
+            })}
         </div>
     )
 }
 
 // 아래 처럼 재사용하는걸 컴포넌트 문법이라고 함.
-function CartItem() {
+function CartItem(props: { name: string, price: number }) {
 
     return (
         <div className="cart-item">
-            <p>상품명: {data.name}</p>
-            <p>$40</p>
+            <p>상품명: {props.name}</p>
+            <p>{props.price}</p>
             <p>1개</p>
         </div>
     )
