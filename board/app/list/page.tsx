@@ -1,6 +1,7 @@
 import { connectDB } from "@/util/database";
 import Link from "next/link"
 import DetailLink from "../detail/[id]/DetailLink";
+import EditLink from "../edit/editLink";
 
 export default async function List() {
 
@@ -22,6 +23,7 @@ export default async function List() {
                         <p>{a.content}</p>
                         {/* id를 props로 전달 */}
                         <DetailLink id={a._id.toString()} />
+                        <EditLink id={a._id.toString()} />
                     </div>
                 )
             }
