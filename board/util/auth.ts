@@ -2,6 +2,33 @@ import { getServerSession, Session } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
 /**
+ * NextAuth 세션 및 JWT 타입 확장
+ */
+declare module "next-auth" {
+  interface Session {
+    user: {
+      id?: string;
+      name?: string | null;
+      email?: string | null;
+      image?: string | null;
+      accessToken?: string;
+      error?: string;
+    }
+  }
+}
+
+declare module "next-auth/jwt" {
+  interface JWT {
+    id?: string;
+    accessToken?: string;
+    refreshToken?: string;
+    accessTokenExpires?: number;
+    user?: any;
+    error?: string;
+  }
+}
+
+/**
  * [ 데이터 취득 방식 및 API 구성 가이드 ]
  * ---------------------------------------------------------------------------------------
  * 구분              | 데이터 위치        | Next.js 사용법           | Spring 비유
