@@ -1,5 +1,7 @@
 import { connectDB } from "@/util/database"
 
+export const revalidate = 60; // 단위는 초로, 페이지별로 캐싱 TTL을 정할 수 있음
+
 export default async function Home() {
   const db = (await connectDB).db('forum');
   // DB 데이터 가져오는건 서버 컴포넌트에서 하는게 좋은 클라이언트 컴포넌트는 항상 JS를 브라우저에 뿌라기 떄문 (애초에 MongoDB 라이브러리 단에서 막혀잇음)

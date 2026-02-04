@@ -1,0 +1,29 @@
+{
+  "mcpServers": {
+    "linkup-mcp-server": {
+      "url": "https://server.smithery.ai/@LinkupPlatform/linkup-mcp-server/mcp",
+      "type": "http"
+    },
+    "exa": {
+      "url": "https://server.smithery.ai/exa/mcp",
+      "type": "http"
+    },
+    "fetch": {
+      "url": "https://server.smithery.ai/@smithery-ai/fetch/mcp",
+      "type": "http"
+    },
+    "deepwiki": {
+      "url": "https://server.smithery.ai/deepwiki/mcp",
+      "type": "http"
+    },
+    "desktop-commander": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@wonderwhy-er/desktop-commander"
+      ]
+    }
+  }
+}

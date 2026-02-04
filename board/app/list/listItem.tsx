@@ -15,15 +15,22 @@ export default function ListItem({ result }: ListItemProps) {
   const { isOpen, openModal, closeAndRefresh } = useModalRefresh(); // use...로 시작하는 훅(Hook)들은 반드시 컴포넌트 함수 내부의 최상단에서 무조건 실행되야함
   const [isSuccess, setIsSuccess] = useState(true);
 
-  const handleDelete = (id: string) => {
+  const handleDelete = (id: string, e: React.MouseEvent) => {
+    const listItem = (e.currentTarget).closest('.list-item') as HTMLElement;
+
+    if (listItem) {
+      // 삭제 요청 전/후에 애니메이션 적용
+      listItem.style.transition = 'opacity 0.5s';
+      listItem.style.opacity = '0';
+    }
+
     fetch('/api/post', { method: 'DELETE', body: id })
       .then((r) => {
         if (r.status === 200) {
-          setIsSuccess(true);
-        } else {
-          setIsSuccess(false);
+          setTimeout(() => {
+            if (listItem) listItem.style.display = 'none';
+          }, 500);
         }
-        openModal();
       });
   };
 
@@ -38,7 +45,7 @@ export default function ListItem({ result }: ListItemProps) {
           <EditLink id={post._id} />
 
           <span
-            onClick={() => handleDelete(post._id)}
+            onClick={(e) => handleDelete(post._id, e)}
             className="cursor-pointer ml-3 text-red-500 hover:font-bold"
           >
             🗑️ 삭제

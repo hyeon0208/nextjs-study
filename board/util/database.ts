@@ -1,6 +1,6 @@
 import { MongoClient, MongoClientOptions } from 'mongodb'
 
-const url = 'mongodb+srv://kaki:456456ok@board.zzg6hue.mongodb.net/?appName=board'
+const url = process.env.MONGO_URL as string
 const options: MongoClientOptions = { }
 
 let connectDB: Promise<MongoClient>
