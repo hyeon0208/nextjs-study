@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .body {
-    margin: 0;
+  margin: 0;
 }
 .list-bg {
   background: rgb(249, 250, 255);
@@ -25,11 +25,11 @@
 .list-item {
   opacity: 1;
   transition: all 1s;
-} 
+}
 .list-item p {
   color: rgb(15, 1, 1);
-  margin : 5px 0px;
-} 
+  margin: 5px 0px;
+}
 .p-20 {
   padding: 20px;
 }
@@ -44,11 +44,11 @@ button {
   background: lightgray;
   border: none;
   border-radius: 5px;
-} 
+}
 a {
   text-decoration: none;
-  color : black;
-} 
+  color: black;
+}
 .navbar {
   background: white;
   padding: 20px;
@@ -60,4 +60,10 @@ a {
 }
 .logo {
   font-weight: bold;
-} 
+}
+.dark-mode .navbar {
+  background: #222;
+}
+.dark-mode .navbar a {
+  color: white;
+}
